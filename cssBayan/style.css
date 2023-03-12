@@ -18,6 +18,8 @@ h1{
   transition: all 0.3s ease-in;
   overflow: hidden;
   opacity: 0;
+  display: block;
+  width: 1rem;
 }
 
 .wrapper{
@@ -113,12 +115,8 @@ color: rgba(0, 0, 0, 0.87);
   }
   .bayan-item__input:checked~.bayan-item__title>.bayan-item__content{
     max-height: 50vw;
-  
-    }
-  .bayan-item__input:hover~.bayan-item__title>.bayan-item__content{
-    max-height: 50vw;
-
   }
+
   .bayan-item__title{
     font-size: 1.05em;
   }
@@ -127,7 +125,17 @@ color: rgba(0, 0, 0, 0.87);
   }
 
 }
+@media (hover: hover) and (max-width:900px) {
+  .bayan-item__input:hover~.bayan-item__title>.bayan-item__content{
+    max-height: 50vw;
+
+  }
+}
+
 @media screen and (max-width:450px) {
+  body{
+    padding: 1rem;
+  }
   .wrapper{
     padding: 1rem;
     max-width: 90%;
@@ -138,30 +146,27 @@ color: rgba(0, 0, 0, 0.87);
   }
   .bayan-item__input:checked~.bayan-item__title>.bayan-item__content{
     max-height:60vw;
-
-    }
-  .bayan-item__input:hover~.bayan-item__title>.bayan-item__content{
-    max-height:60vw;
-
   }
+
   .bayan-item__title{
     font-size: 0.8em;
     padding: 0 0.5rem 0.5rem;
   }
 
 }
+@media (hover: hover) and (max-width:450px) {
+  .bayan-item__input:hover~.bayan-item__title>.bayan-item__content{
+    max-height:60vw;
+
+  }
+}
 
 @media (hover: hover)  {
   .bayan__wrapper:hover .layout-2-column >.fa-plus{
     color: #2B9D1D;
-    }
-  
-  .bayan__wrapper:hover .layout-2-column>.fa-plus{
-    display: block;
     opacity: 1;
-  
-  }
-  
+
+    }
   .bayan-item__title:hover{
     color: rgba(0, 0, 0, 0.87);
   }
