@@ -1,9 +1,111 @@
 body{
-  font-family: Arial, sans-serif;
-  
+  background: linear-gradient(134.72deg, #3023AE 0%, #C86DD7 101.5%);
+  min-height: 100vh;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: 'Red Hat Display', sans-serif;
+  padding: 20px;
 }
-.wrapper{
-  max-width: 1280px;
-  margin: 20px auto;
 
+
+*:before, :after{
+  box-sizing: border-box;
 }
+
+.bayan__wrapper:hover .fa-plus{
+color: #2B9D1D;
+}
+
+h1{
+  padding-bottom: 15px;
+}
+
+.fa-plus{
+  transition: all .5s ease-in;
+  display: none;
+}
+
+.wrapper{
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 2px;
+  filter: drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.3352));
+  background-color: #F8F8F8;
+}
+
+.bayan-item{
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #000;
+  margin-bottom: 15px;  
+}
+
+.bayan-item__title{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 10px;
+  font-size: 1.5em;
+  transition: all 0.5s ease-out;
+  font-weight: 500;
+  color: #2B9D1D;
+}
+
+.bayan-item__title,.bayan-item__input,.bayan-item__content{
+  cursor: pointer;
+}
+
+.bayan-item__input{
+  height: 0;
+  width: 0;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.bayan-item__content img{
+  width: 400px;
+}
+.bayan-item__content{
+  display: block;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s;
+  overflow: hidden;
+  height: 0;
+}
+
+.bayan-item__input:checked~.bayan-item__content{
+  height: 430px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.bayan-item__input:checked + .bayan-item__title > .fa-plus{
+  transform: rotate(45deg);
+}
+
+.bayan-item__input:checked + .bayan-item__title{
+color: rgba(0, 0, 0, 0.87);
+}
+
+.bayan__wrapper:hover .fa-plus{
+  display: block;
+}
+
+.bayan-item__title:hover{
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.bayan-item__input:hover + .bayan-item__title > .fa-plus{
+  transform: rotate(45deg);
+}
+.bayan-item:hover > .bayan-item__content{
+  height: 430px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.bayan__wrapper:hover .bayan-item__title{
+  color: rgba(0, 0, 0, 0.87);
+}
+
+
